@@ -1,5 +1,5 @@
 import logo from '../assets/logo.png'
-// import icone from '../assets/icone.jpg'
+import icone from '../assets/icone.jpg'
 import { HeaderCabec} from '../styled'
 
 export default function Cabecalho(){
@@ -8,8 +8,9 @@ export default function Cabecalho(){
         <HeaderCabec>
             <img src= {logo} id='logo' />
             
-            <h1>KSHOP</h1>
-            {/* <img src= {icone} id='icone' /> */}
+            <h1>SMART SHOP</h1>
+
+            <img src= {icone} id='icone' />
 
         </HeaderCabec>
     )

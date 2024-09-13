@@ -1,31 +1,36 @@
 import styled from "styled-components";
 
 export const HeaderCabec = styled.header`
+    display: grid;
+    grid-auto-rows: 150px;
+    grid-template-columns: 1fr, 1fr, 1fr;
+    grid-template-areas: 
+    'logo  h1  icone'
+    ;
 
-    background-color: white;
-    padding: 20px;
-    display: flex;
-    flex-direction: row;
-    /* justify-content: space-between; */
-    text-align: left;
+    #logo{ grid-area: logo;}
+    h1{ grid-area: h1;}
+    #icone{ grid-area: icone;}
+    
 
     #logo{
         width: 200px;
         height: 200px;
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
         justify-content: left;
     }
 
     h1{
-        align-items: center;
-        text-align: right;
+        text-align: center;
         align-self: center;
-        justify-content: right;
     }
 
     #icone{
-        
+        width: 70px;
+        height: 70px;
+        justify-self: right;
+        align-self: center;
     }
 
 `
@@ -75,11 +80,11 @@ export const FooterHodape = styled.footer`
 
     background-color: black;
     width: 100%;
+    height: 100px;
     min-height: 5vh;
     padding: 20px;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    align-self: flex-end;
 
 `
     

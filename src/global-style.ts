@@ -10,9 +10,9 @@ const GlobalStyle = createGlobalStyle`
     }
 
     #root{
-        width: 100vw;
-        min-height: 100vw;
-        display: flex;
+        height: 95vh;
+        width: 100%;
+        display: grid;
         flex-direction: column;
     }
 
