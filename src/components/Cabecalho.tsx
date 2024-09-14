@@ -1,5 +1,5 @@
 import logo from '../assets/logo.png'
-import icone from '../assets/icone.jpg'
+import icone from '../assets/icone.png'
 import { HeaderCabec} from '../styled'
 
 export default function Cabecalho(){

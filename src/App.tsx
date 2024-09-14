@@ -1,10 +1,16 @@
+import Aparelhos from "./components/Aparelhos";
 import Cabecalho from "./components/Cabecalho"
+import Propaganda from "./components/Propaganda";
 import Rodape from "./components/Rodape"
+import Servicos from "./components/Servicos";
 
+import { listadadosAparelhos } from "./tipagem";
+import { servicosType } from "./tipagem";
+import { listaLojaType } from "./tipagem";
 
 function App() {
 
-  const listaAparelhos:{nome:string,descricao:string,preco:number,img:string}[] = [
+  const listaAparelhos: listadadosAparelhos[] = [
     {nome:'Iphone',descricao:'',preco:5000,img:''},
     {nome:'Samsung',descricao:'',preco:2200,img:''},
     {nome:'Sony',descricao:'',preco:3200,img:''},
@@ -12,11 +18,11 @@ function App() {
     {nome:'Motorolla',descricao:'',preco:1500,img:''}
   ];
 
-  const servicos:{nome:string,descricao:string,preco:number}[] = [
+  const servicos: servicosType[] = [
     {nome:'Teleshop',descricao:'',preco:39},  
   ];
 
-  const listaLoja:{nome:string,redes:string}[] = [
+  const listaLoja:listaLojaType[] = [
     {nome:'Teleshop',redes:''},
     {nome:'Amazon',redes:''},
     {nome:'Mercado Livre',redes:''}
@@ -25,7 +31,10 @@ function App() {
   return (
     <>
       <Cabecalho/>
-      <Rodape/>
+      <Propaganda/>
+      {listaAparelhos.map((aparelho, i)=>(<Aparelhos key={i} nome={aparelho.nome} descricao={aparelho.descricao} preco={aparelho.preco} img={aparelho.img}/>))}
+      {servicos.map((servicos, i)=>(<Servicos key={i} nome={servicos.nome} descricao={servicos.descricao} preco={servicos.preco}/>))}
+      {listaLoja.map((lojas, i)=>(<Rodape key={i} nome={lojas.nome} redes={lojas.redes}/>))}
     </>
   )
 }

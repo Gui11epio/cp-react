@@ -1,6 +1,8 @@
 import styled from "styled-components";
 
 export const HeaderCabec = styled.header`
+    border: 2px solid black;
+    background-color: blue;
     display: grid;
     grid-auto-rows: 150px;
     grid-template-columns: 1fr, 1fr, 1fr;
@@ -42,43 +44,9 @@ export const CorpoPrincipal =styled.main`
 
 `
 
-export const SecPropagandas = styled.div`
-
-    box-sizing: border-box;
-    width: 350px;
-    height: 500px;
-    border: 5px solid black;
-    padding: 20px;
-    
-
-    #aparelhos{
-        box-sizing: border-box;
-        padding: 20px;
-        height:450px;
-        width: auto;
-        flex-direction: column;  
-        display: flex;
-        justify-content: space-between;
-
-    }
-
-    img{
-        height: 250px;
-        width: 210px;
-    }
-
-    h1{
-        font-family: Arial, Helvetica, sans-serif;
-        justify-self: end;
-    }
-
-
-`
-
-
 export const FooterHodape = styled.footer`
 
-    background-color: black;
+    background-color: blue;
     width: 100%;
     height: 100px;
     min-height: 5vh;
@@ -86,5 +54,18 @@ export const FooterHodape = styled.footer`
     display: flex;
     align-self: flex-end;
 
+    h1{
+        font-size: 20px;
+    }
+
 `
     
+export const SectionProp = styled.section`
+    border: 2px solid black;
+    height: 254px;
+    
+    img{
+        height: 250px;
+        width: 100%;
+    }
+`
